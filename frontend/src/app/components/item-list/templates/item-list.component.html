@@ -1,0 +1,12 @@
+<ul>
+    <li>
+        <div *ngFor="let column of headers" ng-class="column.classWidth">
+            {{column.title}}
+        </div>
+    </li>
+    <li *ngFor="let row of rows">
+        <div *ngFor="let column of row" ng-class="column.classWidth">
+            {{column.title}}
+        </div>
+    </li>
+</ul>

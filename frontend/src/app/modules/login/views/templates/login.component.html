@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-xs-2 col-sm-3"></div>
+  <div class="col-xs-8 col-sm-6">
+    <form id="login-form" class="text-left">
+      <div class="row text-center mt-2 mb-2">
+        <image-component class="col-sm-12" [setup]="logo"></image-component>
+        <h5>{{ 'login-sub-header' | translate }}</h5>
+        <div [hidden]="!error" class="alert alert-danger">
+          {{error}}
+        </div>
+      </div>
+      <div class="login-form-main-message"></div>
+      <div class="main-login-form">
+        <div class="login-group">
+          <input-component [setup]="userInput" (onInputChange)="onInputChange()"></input-component>
+          <input-component [setup]="passwordInput" (onInputChange)="onInputChange()"></input-component>
+        </div>
+        <div class="row text-center">
+          <button-component class="col-sm-12" [setup]="loginButton" (onButtonClicked)="login()"></button-component>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="col-xs-2 col-sm-3"></div>
+</div>

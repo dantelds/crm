@@ -1,0 +1,21 @@
+<article>
+  <div class="row">
+    <div class="col-sm-4">
+       <input-component [setup]="searchInput" (onInputChange)="onInputChange()">></input-component>
+    </div>
+    <div class="col-sm-4">
+      <select-component [setup]="searchSelect"></select-component>
+    </div>      
+    <div class="col-sm-4">
+      <div class="row text-center">
+        <button-component class=" col-sm-12" [setup]="searchButton" (onButtonClicked)="searchPartner()"></button-component>
+      </div>
+    </div>    
+  </div>
+<div class="row">
+    <button-component class="col-sm-4" [setup]="addButton" (onButtonClicked)="addPartner()"></button-component>
+</div>
+ <div class="row" *ngIf="itemListSetup && itemListSetup.rows">
+    <item-list-component [setup]="itemListSetup"></item-list-component>
+ </div>
+</article>
